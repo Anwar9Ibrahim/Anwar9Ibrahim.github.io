@@ -178,6 +178,7 @@ h3 { margin-bottom: 10px; font-size: 1.08rem; font-weight: 710; }
 .conference-photo-chep { width: min(100%, 340px); }
 .conference-photo-nucleus { width: min(100%, 170px); }
 .conference-photo-mmcp { width: min(100%, 240px); }
+.conference-photo-poster { width: min(100%, 180px); }
 .conference-photo figcaption { padding: 15px 17px 17px; color: var(--muted); font-size: 12px; line-height: 1.55; }
 .conference-photo figcaption span { display: block; margin-bottom: 3px; color: var(--accent); font-size: 10px; font-weight: 760; letter-spacing: 0.08em; text-transform: uppercase; }
 .conference-list { border-top: 1px solid var(--line); }
