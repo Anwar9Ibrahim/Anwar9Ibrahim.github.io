@@ -1,0 +1,9 @@
+.DS_Store
+
+# Keep original camera files local; publish only optimized assets referenced by the site.
+assets/IMG_*.JPG
+assets/IMG_*.HEIC
+assets/IMG_*.heic
+assets/camphoto_*.jpg
+assets/Reinforcement Learning Conference Lecture.png
+assets/.gitkeep

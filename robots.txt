@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anwar9ibrahim.github.io/sitemap.xml
