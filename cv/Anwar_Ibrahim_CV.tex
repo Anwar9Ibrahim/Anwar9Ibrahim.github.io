@@ -7,8 +7,6 @@
 \usepackage{microtype}
 \usepackage{xcolor}
 \usepackage{enumitem}
-\usepackage{tabularx}
-\usepackage{array}
 \usepackage{titlesec}
 \usepackage[hidelinks]{hyperref}
 \usepackage{bookmark}
@@ -62,65 +60,66 @@
 
 \newcommand{\contactsep}{\hspace{0.45em}\textcolor{rule}{\textbullet}\hspace{0.45em}}
 \newcommand{\entry}[4]{%
-  \begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{3.2cm}@{}}
-    \textbf{#1} & \textbf{#4} \\
-    \textit{\color{muted}#2} & \textit{\color{muted}#3}
-  \end{tabularx}\vspace{-2pt}
+  \textbf{#1}\par
+  {\textit{\color{muted}#2\if\relax\detokenize{#3}\relax\else, #3\fi} \textcolor{rule}{\textbar} \textbf{#4}}\par\vspace{-2pt}
 }
 \newcommand{\project}[3]{%
-  \textbf{#1}\hfill\href{#2}{\textcolor{blue}{Repository}}\\[-1pt]
+  \textbf{#1} --- \href{#2}{\textcolor{blue}{GitHub repository}}\\[-1pt]
   {\color{muted}#3}\par
 }
 \newcommand{\publication}[3]{%
   #1 #2\\[-1pt]
   \textit{#3}
 }
+\newcommand{\skill}[2]{%
+  \textbf{\color{navy}#1:} #2\par\vspace{2pt}
+}
 
 \begin{document}
 
 \begin{center}
   {\fontsize{24}{28}\selectfont\bfseries\color{navy} Anwar Ibrahim}\\[3pt]
-  {\large\color{blue} Machine Learning Researcher \& Engineer}\\[6pt]
+  {\large\color{blue} Machine Learning Researcher $\mid$ Machine Learning Engineer}\\[6pt]
   {\small
-    Moscow, Russia
-    \contactsep \href{mailto:anwar96ibrahim@gmail.com}{anwar96ibrahim@gmail.com}
-    \contactsep \href{https://anwar9ibrahim.github.io/}{Portfolio}
-    \contactsep \href{https://github.com/Anwar9Ibrahim}{GitHub}
-    \contactsep \href{https://www.linkedin.com/in/anwar-ibrahim-7116b4205/}{LinkedIn}
+    Moscow, Russia \contactsep \href{mailto:anwar96ibrahim@gmail.com}{anwar96ibrahim@gmail.com}\\[2pt]
+    \href{https://anwar9ibrahim.github.io/}{anwar9ibrahim.github.io}
+    \contactsep \href{https://github.com/Anwar9Ibrahim}{github.com/Anwar9Ibrahim}
+    \contactsep \href{https://www.linkedin.com/in/anwar-ibrahim-7116b4205/}{linkedin.com/in/anwar-ibrahim-7116b4205}
   }\\[2pt]
-  {\small\href{https://www.hse.ru/en/org/persons/494515691/}{HSE University profile}}
+  {\small\href{https://www.hse.ru/en/org/persons/494515691/}{HSE University profile: hse.ru/en/org/persons/494515691}}
 \end{center}
 
 \vspace{-3pt}
 \section{Professional Summary}
-Machine learning researcher and engineer developing reinforcement-learning methods and research software for accelerator beamline control. Experience spans continuous-control training, simulation environments, comparison with classical optimization, production-oriented machine learning, and agentic LLM systems. Author of peer-reviewed research and experienced in teaching generative models and practical machine learning.
+Machine Learning Researcher and Machine Learning Engineer with experience developing reinforcement learning (RL), research software, production-oriented machine learning, and agentic large language model (LLM) systems. Expertise includes Python, PyTorch, continuous-control methods, simulation environments, benchmarking against classical optimization, model evaluation, deployment, and monitoring. First author of three peer-reviewed journal articles and lecturer in generative models and practical machine learning.
 
-\section{Experience}
+\section{Work Experience}
 
 \entry{Junior Research Fellow}{HSE University --- LAMBDA}{Moscow, Russia}{Oct 2023--Present}
 \begin{itemize}
-  \item Develop reinforcement-learning methods and research software for accelerator beamline control.
-  \item Build Gymnasium-compatible simulation environments that connect learning agents with Elegant and SDDS accelerator tools.
-  \item Train continuous-control agents, including DDPG, SAC, and TD3, and compare them with differential-evolution and Bayesian-optimization baselines.
-  \item Publish and present research on simulation-based accelerator control in peer-reviewed journals and international scientific venues.
+  \item Design and implement reinforcement-learning methods and Python research software for accelerator beamline control.
+  \item Build Gymnasium-compatible simulation environments that integrate learning agents with Elegant and Self Describing Data Sets (SDDS) accelerator tools.
+  \item Train and benchmark Deep Deterministic Policy Gradient (DDPG), Soft Actor-Critic (SAC), and Twin Delayed DDPG (TD3) agents against differential-evolution and Bayesian-optimization baselines.
+  \item Authored three peer-reviewed journal articles as first author on simulation-based accelerator control and present results at international conferences and workshops.
 \end{itemize}
 
 \entry{Lecturer --- Generative Models in Machine Learning}{HSE University}{Moscow, Russia}{Jan 2025--Present}
 \begin{itemize}
-  \item Teach \textit{Generative Models in Machine Learning} in English, covering variational autoencoders, GANs, autoregressive models, and normalizing flows.
-  \item Contribute practical machine-learning sessions and a reinforcement-learning competition to the All-Russian High-Energy Physics School.
+  \item Teach \textit{Generative Models in Machine Learning} in English, covering variational autoencoders, generative adversarial networks (GANs), autoregressive models, and normalizing flows.
+  \item Deliver practical machine-learning instruction and contribute to a reinforcement-learning competition at the All-Russian High-Energy Physics School.
 \end{itemize}
 
 \entry{AI Engineer --- Agentic Systems}{Eolos AI}{}{Dec 2025--Oct 2026}
 \begin{itemize}
-  \item Developed components for private agentic AI systems built around large language models and multi-step LangGraph workflows.
-  \item Implemented human-in-the-loop review and feedback paths, managed application data with Convex, and used LangSmith for tracing and evaluation.
-  \item Worked on the orchestration, observability, and reliability of LLM-based workflows.
+  \item Developed components for private agentic artificial intelligence systems built around large language models and multi-step LangGraph workflows.
+  \item Designed and implemented human-in-the-loop review and feedback paths, with application data managed in Convex.
+  \item Used LangSmith tracing and evaluation to support the observability and reliability of LLM workflows.
 \end{itemize}
 
 \entry{Machine Learning Engineer}{EXPentech}{Damascus, Syria}{Jun 2020--Sep 2023}
 \begin{itemize}
-  \item Developed and evaluated machine-learning models, prepared and explored datasets, and supported model deployment and monitoring.
+  \item Developed and evaluated machine-learning models and prepared datasets through exploratory analysis.
+  \item Supported model deployment and monitoring in production-oriented machine-learning workflows.
 \end{itemize}
 
 \section{Education}
@@ -166,14 +165,12 @@ Machine learning researcher and engineer developing reinforcement-learning metho
 \project{Multilingual Contexto}{https://github.com/Anwar9Ibrahim/Contexto-game}{Semantic word-guessing game built with BERT-family models and Streamlit, supporting Arabic, English, and Russian.}
 
 \section{Technical Skills}
-\begin{tabularx}{\textwidth}{@{}>{\bfseries\color{navy}}p{3.35cm}X@{}}
-  Machine Learning & Reinforcement learning, generative models, diffusion models, NLP, computer vision, human-in-the-loop systems \\
-  Programming & Python, C\#, SQL \\
-  Frameworks & PyTorch, TensorFlow, Gymnasium, Stable-Baselines3, Streamlit, OpenCV \\
-  Agentic AI & LangChain, LangGraph, LangSmith, Convex, LLM workflow orchestration \\
-  Scientific Tools & Elegant, SDDS, simulation-based optimization, experiment tracking \\
-  Engineering & Git, model evaluation, deployment, monitoring \\
-  Languages & Arabic, English, Russian
-\end{tabularx}
+\skill{Machine Learning}{Reinforcement learning, generative models, diffusion models, natural language processing (NLP), computer vision, human-in-the-loop systems}
+\skill{Programming}{Python, C\#, SQL}
+\skill{Frameworks}{PyTorch, TensorFlow, Gymnasium, Stable-Baselines3, Streamlit, OpenCV}
+\skill{Agentic AI}{LangChain, LangGraph, LangSmith, Convex, large language model (LLM) workflow orchestration}
+\skill{Scientific Tools}{Elegant, SDDS, simulation-based optimization, experiment tracking}
+\skill{Engineering}{Git, model evaluation, deployment, monitoring}
+\skill{Languages}{Arabic, English, Russian}
 
 \end{document}
