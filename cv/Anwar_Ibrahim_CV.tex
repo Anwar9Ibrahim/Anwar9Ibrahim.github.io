@@ -1,0 +1,182 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=1.55cm,top=1.35cm,bottom=1.4cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{navy}{HTML}{102F55}
+\definecolor{blue}{HTML}{1E5A96}
+\definecolor{text}{HTML}{1D2733}
+\definecolor{muted}{HTML}{526174}
+\definecolor{rule}{HTML}{C9D5E2}
+
+\color{text}
+\urlstyle{same}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=blue,
+  pdftitle={Anwar Ibrahim -- Curriculum Vitae},
+  pdfauthor={Anwar Ibrahim},
+  pdfsubject={Machine Learning Research and Engineering},
+  pdfkeywords={machine learning, reinforcement learning, accelerator control, generative models, agentic AI}
+}
+
+\titleformat{\section}
+  {\large\bfseries\color{navy}}
+  {}{0pt}{}
+  [\vspace{2pt}\color{rule}\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{6pt}
+
+\setlist[itemize]{
+  leftmargin=1.35em,
+  itemsep=1.6pt,
+  topsep=3pt,
+  parsep=0pt,
+  partopsep=0pt,
+  label=\textcolor{blue}{\small\textbullet}
+}
+\setlist[enumerate]{
+  leftmargin=1.65em,
+  itemsep=4pt,
+  topsep=3pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\newcommand{\contactsep}{\hspace{0.45em}\textcolor{rule}{\textbullet}\hspace{0.45em}}
+\newcommand{\entry}[4]{%
+  \begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{3.2cm}@{}}
+    \textbf{#1} & \textbf{#4} \\
+    \textit{\color{muted}#2} & \textit{\color{muted}#3}
+  \end{tabularx}\vspace{-2pt}
+}
+\newcommand{\project}[3]{%
+  \textbf{#1}\hfill\href{#2}{\textcolor{blue}{Repository}}\\[-1pt]
+  {\color{muted}#3}\par
+}
+\newcommand{\publication}[3]{%
+  #1 #2\\[-1pt]
+  \textit{#3}
+}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{24}{28}\selectfont\bfseries\color{navy} Anwar Ibrahim}\\[3pt]
+  {\large\color{blue} Machine Learning Researcher \& Engineer}\\[6pt]
+  {\small
+    Moscow, Russia
+    \contactsep \href{mailto:anwar96ibrahim@gmail.com}{anwar96ibrahim@gmail.com}
+    \contactsep \href{https://anwar9ibrahim.github.io/}{Portfolio}
+    \contactsep \href{https://github.com/Anwar9Ibrahim}{GitHub}
+    \contactsep \href{https://www.linkedin.com/in/anwar-ibrahim-7116b4205/}{LinkedIn}
+  }\\[2pt]
+  {\small\href{https://www.hse.ru/en/org/persons/494515691/}{HSE University profile}}
+\end{center}
+
+\vspace{-3pt}
+\section{Professional Summary}
+Machine learning researcher and engineer developing reinforcement-learning methods and research software for accelerator beamline control. Experience spans continuous-control training, simulation environments, comparison with classical optimization, production-oriented machine learning, and agentic LLM systems. Author of peer-reviewed research and experienced in teaching generative models and practical machine learning.
+
+\section{Experience}
+
+\entry{Junior Research Fellow}{HSE University --- LAMBDA}{Moscow, Russia}{Oct 2023--Present}
+\begin{itemize}
+  \item Develop reinforcement-learning methods and research software for accelerator beamline control.
+  \item Build Gymnasium-compatible simulation environments that connect learning agents with Elegant and SDDS accelerator tools.
+  \item Train continuous-control agents, including DDPG, SAC, and TD3, and compare them with differential-evolution and Bayesian-optimization baselines.
+  \item Publish and present research on simulation-based accelerator control in peer-reviewed journals and international scientific venues.
+\end{itemize}
+
+\entry{Lecturer --- Generative Models in Machine Learning}{HSE University}{Moscow, Russia}{Jan 2025--Present}
+\begin{itemize}
+  \item Teach \textit{Generative Models in Machine Learning} in English, covering variational autoencoders, GANs, autoregressive models, and normalizing flows.
+  \item Contribute practical machine-learning sessions and a reinforcement-learning competition to the All-Russian High-Energy Physics School.
+\end{itemize}
+
+\entry{AI Engineer --- Agentic Systems}{Eolos AI}{}{Dec 2025--Oct 2026}
+\begin{itemize}
+  \item Developed components for private agentic AI systems built around large language models and multi-step LangGraph workflows.
+  \item Implemented human-in-the-loop review and feedback paths, managed application data with Convex, and used LangSmith for tracing and evaluation.
+  \item Worked on the orchestration, observability, and reliability of LLM-based workflows.
+\end{itemize}
+
+\entry{Machine Learning Engineer}{EXPentech}{Damascus, Syria}{Jun 2020--Sep 2023}
+\begin{itemize}
+  \item Developed and evaluated machine-learning models, prepared and explored datasets, and supported model deployment and monitoring.
+\end{itemize}
+
+\section{Education}
+
+\entry{PhD Candidate, Artificial Intelligence and Machine Learning}{HSE University}{Moscow, Russia}{Nov 2023--Present}
+\begin{itemize}
+  \item Doctoral research: reinforcement-learning-based control of accelerator beamlines.
+\end{itemize}
+
+\entry{Master's in Data Science}{HSE University}{Moscow, Russia}{2021--Jul 2023}
+\begin{itemize}
+  \item Degree programme in Applied Mathematics and Information Science.
+\end{itemize}
+
+\entry{Bachelor's in Computer Software Engineering}{Higher Institute for Applied Sciences and Technology}{Damascus, Syria}{2015--2020}
+
+\newpage
+\section{Peer-Reviewed Publications}
+\begin{enumerate}
+  \item \publication{\textbf{Anwar Ibrahim}, Fedor Ratnikov, Maxim Kaledin, Alexey Petrenko, Denis Derkach.}{\href{https://doi.org/10.1016/j.cpc.2026.110407}{\textit{RL-ABC: Reinforcement Learning for Accelerator Beamline Control}.}}{Computer Physics Communications, 329, 110407 (2026).}
+
+  \item \publication{\textbf{Anwar Ibrahim}, Alexey Petrenko, Maxim Kaledin, Ehab Suleiman, Fedor Ratnikov, Denis Derkach.}{\href{https://doi.org/10.1142/S0218301326410272}{\textit{Reinforcement Learning for Accelerator Beamline Control: A Simulation-Based Approach}.}}{International Journal of Modern Physics E, 35(07) (2026).}
+
+  \item \publication{\textbf{Anwar Ibrahim}, Denis Derkach, Alexey Petrenko, Fedor Ratnikov, Maxim Kaledin.}{\href{https://doi.org/10.1134/S1063779625700716}{\textit{Optimization of the Accelerator Control by Reinforcement Learning: A Simulation-Based Approach}.}}{Physics of Particles and Nuclei, 56(6), 1476--1481 (2025).}
+\end{enumerate}
+
+\section{Selected Conference Contributions}
+\begin{itemize}
+  \item \textbf{CHEP 2026, Bangkok --- Talk:} \href{https://indico.cern.ch/event/1471803/contributions/6966806/}{RL-ABC: Reinforcement Learning for Accelerator Beamline Control}.
+  \item \textbf{ACAT 2025 --- Oral contribution:} \href{https://indico.cern.ch/event/1488410/contributions/6562827/}{Optimisation of the Accelerator Control by Reinforcement Learning: A Simulation-Based Approach}.
+  \item \textbf{NUCLEUS 2025 --- Talk:} \href{https://indico.spbu.ru/event/1/contributions/171/}{Reinforcement Learning for Accelerator Beamline Control}.
+  \item \textbf{CERN Workshop 2025:} \href{https://indico.cern.ch/event/1502120/contributions/6505973/}{Reinforcement Learning for Accelerator Beamline Control}.
+  \item \textbf{MMCP 2024:} \href{https://indico.jinr.ru/event/4467/contributions/28919/}{Optimization of Accelerator Control by Reinforcement Learning}.
+\end{itemize}
+
+\section{Selected Projects}
+\project{RL-ABC}{https://github.com/hse-cs/RL-ABC}{Research framework that converts Elegant accelerator lattice configurations into reinforcement-learning environments, with continuous-control agents and classical optimization baselines.}
+\vspace{4pt}
+\project{Implicit Q-Learning on Hopper}{https://github.com/Anwar9Ibrahim/offlineRL_hopper}{PyTorch implementation of Implicit Q-Learning on the D4RL Hopper expert dataset, including actor, value, twin-critic, and target networks.}
+\vspace{4pt}
+\project{Interpretable Reinforcement Learning for Pong}{https://github.com/Anwar9Ibrahim/Interpretable-RL}{Analysis toolkit using saliency maps, Q-value inspection, paddle-position analysis, and an interactive dashboard.}
+\vspace{4pt}
+\project{Multilingual Contexto}{https://github.com/Anwar9Ibrahim/Contexto-game}{Semantic word-guessing game built with BERT-family models and Streamlit, supporting Arabic, English, and Russian.}
+
+\section{Technical Skills}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries\color{navy}}p{3.35cm}X@{}}
+  Machine Learning & Reinforcement learning, generative models, diffusion models, NLP, computer vision, human-in-the-loop systems \\
+  Programming & Python, C\#, SQL \\
+  Frameworks & PyTorch, TensorFlow, Gymnasium, Stable-Baselines3, Streamlit, OpenCV \\
+  Agentic AI & LangChain, LangGraph, LangSmith, Convex, LLM workflow orchestration \\
+  Scientific Tools & Elegant, SDDS, simulation-based optimization, experiment tracking \\
+  Engineering & Git, model evaluation, deployment, monitoring \\
+  Languages & Arabic, English, Russian
+\end{tabularx}
+
+\section{Selected Research Coverage}
+\href{https://www.hse.ru/news/science/1215225704.html}{HSE University science feature on RL-ABC and accelerator-control research} (2026), with additional coverage in Gazeta.Ru, Vedomosti, Mail.ru Science, Naked Science, CNews, and other outlets.
+
+\end{document}

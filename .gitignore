@@ -7,3 +7,10 @@ assets/IMG_*.heic
 assets/camphoto_*.jpg
 assets/Reinforcement Learning Conference Lecture.png
 assets/.gitkeep
+
+# LaTeX build products; keep the editable source and published PDF only.
+cv/*.aux
+cv/*.log
+cv/*.out
+cv/*.pdf
+tmp/
